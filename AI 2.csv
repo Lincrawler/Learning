@@ -1,0 +1,16 @@
+Customer No.,Sex,No. of Transactions,Monthly Payment,No. of months in Silver,Decision
+1,0,8,301,4,Remain
+2,1,18,448,8,Downgrade
+3,0,5,305,9,Remain
+4,1,3,309,6,Downgrade
+5,0,11,522,10,Remain
+6,1,3,650,13,Downgrade
+7,0,9,490,5,Upgrade
+8,1,10,300,7,Upgrade
+9,0,7,274,12,Downgrade
+10,0,20,575,15,Upgrade
+11,1,22,530,9,Downgrade
+12,0,14,363,6,Upgrade
+13,1,10,409,8,Remain
+14,1,15,479,7,Remain
+15,1,13,445,11,Remain
