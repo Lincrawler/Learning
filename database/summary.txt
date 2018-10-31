@@ -1,0 +1,141 @@
+Entities
+Project Info. : REGULAR ENTITY
+
+Title : ATTRIBUTE Type:CHAR Length=20
+
+Preference : ATTRIBUTE Type:CHAR Length=20
+
+Leader name : [PK] ATTRIBUTE Type:CHAR Length=20
+
+Team structure : ATTRIBUTE Type:CLOB Length=100
+
+Commence date : ATTRIBUTE Type:TIME
+
+Complete date : ATTRIBUTE Type:TIME
+
+Trip period : ATTRIBUTE Type:TIME
+
+Funding request : ATTRIBUTE Type:NUMERIC Length=100 Width=100
+
+Location : ATTRIBUTE Type:NCHAR VARYING Length=20
+
+Expected No. : ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+Beneficiary : ATTRIBUTE Type:NCHAR VARYING Length=20
+
+Group leader : REGULAR ENTITY
+
+name : ATTRIBUTE Type:CHAR Length=20
+
+Student ID : [PK] ATTRIBUTE Type:NUMERIC Length=20 Width=10
+
+Email address : ATTRIBUTE Type:VARCHAR Length=50
+
+SL subject title : ATTRIBUTE Type:CHAR Length=20
+
+Tel  : ATTRIBUTE Type:NUMERIC Length=20 Width=10
+
+SL-subject-code : ATTRIBUTE Type:NUMERIC Length=20 Width=10
+
+Members : REGULAR ENTITY
+
+name : ATTRIBUTE Type:CHAR Length=20
+
+student ID : [PK] ATTRIBUTE Type:NUMERIC Length=20 Width=20
+
+Mobile No. : ATTRIBUTE Type:NUMERIC Length=20 Width=10
+
+Alumni/student : ATTRIBUTE Type:BOOLEAN
+
+SL subject code : ATTRIBUTE Type:NUMERIC Length=20 Width=10
+
+Organization : REGULAR ENTITY
+
+name : ATTRIBUTE Type:VARCHAR Length=20
+
+address : ATTRIBUTE Type:VARCHAR Length=20
+
+post : [PK] ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+Tel. : ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+Email : ATTRIBUTE Type:VARCHAR Length=20
+
+Proposal : REGULAR ENTITY
+
+Project objective : ATTRIBUTE Type:VARCHAR Length=50
+
+Nature : ATTRIBUTE Type:VARCHAR Length=50
+
+impact : ATTRIBUTE Type:VARCHAR Length=50
+
+student involve : ATTRIBUTE Type:BOOLEAN
+
+Risk management : ATTRIBUTE Type:VARCHAR Length=50
+
+evaluation : ATTRIBUTE Type:VARCHAR Length=
+
+dissemination : ATTRIBUTE Type:VARCHAR Length=50
+
+Outcomes : REGULAR ENTITY
+
+major outcome : ATTRIBUTE Type:VARCHAR Length=50
+
+deliverable plan : ATTRIBUTE Type:VARCHAR Length=50
+
+Timeline  : ATTRIBUTE Type:TIMESTAMP
+
+activity : ATTRIBUTE Type:VARCHAR Length=20
+
+Seq. number : [PK] ATTRIBUTE Type:NUMERIC Length= Width=
+
+expenditure : REGULAR ENTITY
+
+proj exp : ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+trip exp : ATTRIBUTE Type:VARCHAR Length=20
+
+description : ATTRIBUTE Type:VARCHAR Length=20
+
+budget : ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+sequence no. : [PK] ATTRIBUTE Type:NUMERIC Length=10 Width=
+
+item : ATTRIBUTE Type:VARCHAR Length=20
+
+description : ATTRIBUTE Type:VARCHAR Length=20
+
+total : ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+Supervisor : REGULAR ENTITY
+
+name : ATTRIBUTE Type:VARCHAR Length=20
+
+title : ATTRIBUTE Type:VARCHAR Length=20
+
+Dept. : ATTRIBUTE Type:VARCHAR Length=20
+
+Tel : [PK] ATTRIBUTE Type:NUMERIC Length=20 Width=
+
+email : ATTRIBUTE Type:VARCHAR Length=20
+
+Servce-Ln Proj. : REGULAR ENTITY
+
+project name : ATTRIBUTE Type:NO DATATYPE
+
+Relationships
+has : REGULAR RELATIONSHIP Project Info. ONE MANDATORY to Group leader ONE MANDATORY
+
+has : REGULAR RELATIONSHIP Project Info. ONE MANDATORY to Members MANY MANDATORY
+
+Collaborates : REGULAR RELATIONSHIP Organization MANY OPTIONAL to Project Info. ONE MANDATORY
+
+implement : REGULAR RELATIONSHIP Proposal to Outcomes
+
+has : REGULAR RELATIONSHIP Servce-Ln Proj. to Project Info.
+
+has : REGULAR RELATIONSHIP Servce-Ln Proj. to Proposal
+
+has : REGULAR RELATIONSHIP Servce-Ln Proj. to expenditure
+
+has : REGULAR RELATIONSHIP Servce-Ln Proj. to Supervisor
